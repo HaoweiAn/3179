@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Visualizing Automobile Ownership Trends in Australian Households</title>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+</head>
+<body>
+<h2>Domain</h2>
+<p>The visualization focuses on the domain of automobile ownership among Australian households. This encompasses a comprehensive look into factors such as the number of cars per household, the distribution of car brands, the age of the cars owned, the geographic distribution of car ownership, and possibly the economic and environmental impacts associated with it.</p>
+<h2>Why?</h2>
+<ul>
+<li>Informative: Car ownership patterns can reveal a lot about the socio-economic status of different regions or demographics. For instance, regions with higher car ownership might indicate areas with better economic conditions or less public transportation availability.</li>
+<li>Policy Making: Governments and local authorities can utilize this data for better infrastructure planning, like road expansions or promoting public transport.</li>
+<li>Business Insights: Car manufacturers and dealers can identify potential markets or areas where specific car brands or types are popular.</li>
+<li>Environmental Concerns: By understanding the age distribution and type of cars owned, one can infer the environmental impact in terms of emissions. This can guide policies on promoting electric vehicles or cleaner fuels.</li>
+<li>Public Interest: The general public, especially potential car buyers, would be interested in knowing the most popular cars or brands in their region.</li>
+</ul>
+<h2>Datasets</h2>
+<p>Datasets related to Australian car ownership can be potentially sourced from:</p>
+<ul>
+<li>Australian Bureau of Statistics (ABS)</li>
+<li>Department of Infrastructure, Transport, Regional Development and Communications</li>
+<li>Local transportation agencies or automobile associations</li>
+</ul>
+<p>Always ensure that the datasets used are publicly accessible and do not require special permissions or accounts.</p>
+<h2>Design Ideas</h2>
+<ul>
+<li>Maps: A geographic heat map can depict the density of car ownership across different regions or states in Australia.</li>
+<li>Bar Charts: To represent the number of cars owned by households, a simple bar chart can be effective. Similarly, bar charts can be used for brand distribution.</li>
+<li>Pie Charts: To showcase the distribution of car types (e.g., sedans, SUVs, trucks) or fuel types (e.g., petrol, diesel, electric).</li>
+<li>Time Series Graphs: If data over years is available, this can show the trend in car ownership or the rise in electric vehicles.</li>
+<li>Inspiration: Visualizations from global car agencies or reports, like the World Car Market report, can be a source of inspiration. Additionally, platforms like Tableau Public have numerous visualizations that can be referred to for innovative ideas.</li>
+</ul>
+
+<h1>Car Types Owned</h1>
+<div id="vis_car_types"></div>
+<script type="text/javascript">
+  var spec_car_types = {"data": {"values": [{"type": "Sedans", "number": 4000}, {"type": "SUVs", "number": 5500}, {"type": "Hatchbacks", "number": 3000}, {"type": "Trucks", "number": 1500}]}, "mark": "bar", "encoding": {"x": {"field": "type", "type": "ordinal", "title": "Car Type"}, "y": {"field": "number", "type": "quantitative", "title": "Number of Cars"}, "color": {"field": "type", "type": "nominal"}}};
+  vegaEmbed('#vis_car_types', spec_car_types);
+</script>
+<h1>Car Ownership by Region</h1>
+<div id="vis_car_ownership"></div>
+<script type="text/javascript">
+  var spec_car_ownership = {"data": {"values": [{"region": "New South Wales", "density": 700}, {"region": "Queensland", "density": 650}, {"region": "Victoria", "density": 720}, {"region": "Western Australia", "density": 610}, {"region": "South Australia", "density": 630}, {"region": "Tasmania", "density": 580}, {"region": "Northern Territory", "density": 560}, {"region": "Australian Capital Territory", "density": 690}]}, "mark": "bar", "encoding": {"y": {"field": "region", "type": "ordinal", "title": "Region"}, "x": {"field": "density", "type": "quantitative", "title": "Number of Cars per 1000 households"}, "color": {"field": "density", "type": "quantitative"}}};
+  vegaEmbed('#vis_car_ownership', spec_car_ownership);
+</script>
+</body>
+</html>
