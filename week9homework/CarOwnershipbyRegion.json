@@ -1,0 +1,55 @@
+{
+    "data": {
+        "values": [
+            {
+                "region": "New South Wales",
+                "density": 700
+            },
+            {
+                "region": "Queensland",
+                "density": 650
+            },
+            {
+                "region": "Victoria",
+                "density": 720
+            },
+            {
+                "region": "Western Australia",
+                "density": 610
+            },
+            {
+                "region": "South Australia",
+                "density": 630
+            },
+            {
+                "region": "Tasmania",
+                "density": 580
+            },
+            {
+                "region": "Northern Territory",
+                "density": 560
+            },
+            {
+                "region": "Australian Capital Territory",
+                "density": 690
+            }
+        ]
+    },
+    "mark": "bar",
+    "encoding": {
+        "y": {
+            "field": "region",
+            "type": "ordinal",
+            "title": "Region"
+        },
+        "x": {
+            "field": "density",
+            "type": "quantitative",
+            "title": "Number of Cars per 1000 households"
+        },
+        "color": {
+            "field": "density",
+            "type": "quantitative"
+        }
+    }
+}
