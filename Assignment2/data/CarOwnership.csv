@@ -1,11 +1,9 @@
-state,Proportion of cars (%),Number of cars
-New South Wales,31.2,"5,999,491"
-Victoria,24.2,"4,653,451"
-Queensland,19.4,"3,730,452"
-South Australia,5.5,"1,057,602"
-Western Australia,15.9,"3,057,433"
-Tasmania,1.4,"269,207"
-Northern Territory,1.1,"211,520"
-Australian Capital Territory,1.3,"249,978"
-,,
-"Source: Australian Bureau of Statistics, Australian Industry 2021-22 financial year",,
+state,Proportion,Number
+New South Wales,31.2,5999491
+Victoria,24.2,4653451
+Queensland,19.4,3730452
+South Australia,5.5,1057602
+Western Australia,15.9,3057433
+Tasmania,1.4,269207
+Northern Territory,1.1,211520
+Australian Capital Territory,1.3,249978
