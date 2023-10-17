@@ -5,7 +5,7 @@
     "title": "Australian car ownership: State By State",
     "projection": {"type": "equirectangular"},
         "data": {
-          "url": "https://raw.githubusercontent.com/HaoweiAn/3179/main/Assignment2/js/aus_mapJco.topojson",
+          "url": "https://raw.githubusercontent.com/HaoweiAn/3179/main/Assignment2/js/aus_map.topojson",
           "format": {"type": "topojson", "feature": "STE_2016_AUST"}
         },
     "transform": [{
@@ -15,29 +15,30 @@
                 "url":"https://raw.githubusercontent.com/HaoweiAn/3179/main/Assignment2/data/CarOwnership.csv"
             },
             "key": "state",
-            "fields": ["Number of cars", "Proportion of cars (%)"]
-            }
+            "fields": ["Number", "Proportion"]
+            } 
 
-        }
+        },
+        {"calculate": "datum.Proportion / 1", "as": "prop"}
         
     ],
     "layer":[
     {"mark": {"type": "geoshape"},
     "encoding": {
           "color": {
-            "field": "Proportion of cars (%)",
+            "field": "prop",
             "type": "quantitative",
             "scale": {"scheme": "yellowgreen"},
             "title": "Proportion of cars (%)"
           },
           "tooltip": [
             {"field": "properties.STE_NAME16", "type":"nominal", "title": "State"},
-            {"field": "Number of cars", "type": "quantitative", "title": "Number of cars"},
-            {"field": "Proportion of cars (%)", "type": "quantitative", "title": "Proportion of cars (%)"}
+            {"field": "Number", "type": "quantitative", "title": "Number of cars"},
+            {"field": "Proportion", "type": "quantitative", "title": "Proportion of cars (%)"}
           ]}
         }
         ],
-        "background":"#f7f4f4",
+        "background":"#ffffff",
         "config": {"title": {"color":"black"},"axis":{"titleColor":"black","labelColor":"black"},"legend": {"titleColor":"black","labelColor":"black"}}
       }
   
