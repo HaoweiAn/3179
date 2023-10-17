@@ -38,7 +38,6 @@
           ]}
         }
         ],
-        "background":"white",
         "config": {"title": {"color":"black"},"axis":{"titleColor":"black","labelColor":"black"},"legend": {"titleColor":"black","labelColor":"black"}}
       }
   
