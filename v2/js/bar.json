@@ -23,7 +23,7 @@
     }
   },
   "layer": [{
-    "mark": {"type":"bar","color":"green"}
+    "mark": {"type":"bar","color":"skyblue"}
   }, {
     "mark": {
       "type": "text",
