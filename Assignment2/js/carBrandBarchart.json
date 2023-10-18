@@ -1,0 +1,31 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A bar chart representing car brand ownership in Australian households.",
+    "data": {
+        "url": "https://raw.githubusercontent.com/HaoweiAn/3179/main/Assignment2/data/CarBrand.csv",
+        "format": {
+            "type": "csv"
+        }
+    },
+    "mark": "bar",
+    "encoding": {
+        "x": {
+            "field": "Car Brand",
+            "type": "ordinal",
+            "axis": {
+                "labelAngle": -45
+            },
+            "sort": "-y"
+        },
+        "y": {
+            "field": "Number of Cars",
+            "type": "quantitative"
+        },
+        "color": {
+            "field": "Car Brand",
+            "type": "nominal",
+            "legend": null
+        }
+    },
+    "title": "Car Brand Ownership in Australian Households"
+}
