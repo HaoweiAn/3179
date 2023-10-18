@@ -74,7 +74,7 @@
     <div class="pure-g">
      <div class="pure-u-1-1">
         <div class="description description-left">
-          <h2 style="color: steelblue;">Public Health</h2>
+          <h2 style="color: steelblue;">Car Age</h2>
         </div>
      </div>
   
@@ -116,9 +116,34 @@
     <div class="pure-g">
       <div class="pure-u-1-1">
         <div class="description description-left">
-          <h2 style="color: steelblue;">Economic status of the population</h2>
+          <h2 style="color: steelblue;">Car Type</h2>
         </div>
       </div>
+    </div>
+    <div class="pure-u-1-1">
+      <div id="vis3" class="vis-container"></div></div>
+      <div class="pure-u-1-2">
+      <p>The <strong style="color: darkgreen;">map visualization</strong> depicts the distribution of global life expectancy 
+        counted during 2019, the color of the markers represents the 
+        degree of longevity of the life expectancy, the darker the color, 
+        the longer the life expectancy of the country.</p>
+      <p>Overall, most countries have a life expectancy of around <strong style="color: darkgreen;">70 years</strong>,
+         which is a relatively normal range, but there are particularly striking 
+         examples. </p>
+    </div>
+    <div class="pure-u-1-2"><p> The <strong style="color: darkgreen;">lightest color</strong> on the map represents the country with the 
+      lowest life expectancy, which is <strong style="color: darkgreen;">Chad</strong>, with a life expectancy of <strong style="color: darkgreen;">54.239</strong>.</p>
+      <p>
+       The <strong style="color: darkgreen;">darkest color</strong> represents the country with the highest life expectancy, 
+       which is <strong style="color: darkgreen;">Japan</strong>, with a life expectancy of <strong style="color: darkgreen;">84.356</strong>. The difference 
+       between these two countries is almost twice as great!</p>
+      </div>
+  </div>
+
+
+
+
+
       <div class="pure-u-1-2">
         <div id="vis5" class="vis-container"></div>
         <p>Higher economic levels usually mean better living conditions, 
@@ -182,9 +207,8 @@
 <script type="text/javascript">
 
   var specVis1 = "js/choropleth_map.vg.json";
-  var specVis2 = "js/line_chart.json";
-  var specVis3 = "js/bubble_chart.json";
-  var specVis4 = "js/bar_chart.json";
+  var specVis2 = "js/carBrandBarchart.json";
+  var specVis3 = "js/Cartype.json";
   var specVis5 = "js/pie.json";
   var specVis6 = "js/bar.json";
 
@@ -197,10 +221,6 @@
   }).catch(console.error);
 
   vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {
-   // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-
-  vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
