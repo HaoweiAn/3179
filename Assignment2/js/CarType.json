@@ -1,0 +1,31 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "url": "https://raw.githubusercontent.com/HaoweiAn/3179/main/Assignment2/data/CarType.csv",
+        "format": {
+            "type": "csv"
+        }
+    },
+    "mark": "bar",
+    "encoding": {
+        "x": {
+            "field": "Number of Cars",
+            "type": "quantitative",
+            "title": "Number of Cars"
+        },
+        "y": {
+            "field": "Car Type",
+            "type": "ordinal",
+            "title": "Car Type",
+            "sort": "-x"
+        },
+        "color": {
+            "field": "Car Type",
+            "type": "nominal",
+            "legend": {
+                "title": "Car Type"
+            }
+        }
+    },
+    "title": "Distribution of Car Types Owned"
+}
