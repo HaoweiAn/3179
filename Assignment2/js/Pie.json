@@ -4,11 +4,7 @@
     "url": "https://raw.githubusercontent.com/HaoweiAn/3179/main/Assignment2/data/CarAgeProp.csv"
   },
   "title": "Car Age Distribution",
-  "selection": {
-      "highlight": {
-        "type": "single"
-      }
-    },
+
   "mark": "arc",
   "encoding": {
     "theta": {
@@ -20,19 +16,7 @@
       "type": "nominal",
       "legend": {
           "title": "Car age range" 
-      },
-      "condition": {
-          "selection": "highlight",
-          "value": "steelblue"
-        },
-        "value": "lightgray"
-    },
-    "opacity": {
-      "condition": {
-        "selection": "highlight",
-        "value": 1
-      },
-      "value": 0.5
+      }
     },
     "tooltip": [
       {"field": "age", "type": "nominal"},
